@@ -1,0 +1,7 @@
+.local/
+lazy-lock.json
+*.log
+*.sql
+*.csv
+*.tmp
+
