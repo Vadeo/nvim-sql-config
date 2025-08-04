@@ -77,9 +77,9 @@ function M.exec_sql_to_csv()
   f:write(sql)
   f:close()
 
-  -- PSQL выгружает результат в CSV
+  -- PSQL выгружает результат в CSV (с заголовками)
   local cmd = string.format(
-    [[psql -h snowplow.xtools.tv -p 5439 -U vselin -d dev -A -F"," -q -t -f %s > %s]],
+    [[psql -h snowplow.xtools.tv -p 5439 -U vselin -d dev --csv -f %s > %s]],
     tmp_sql,
     tmp_csv
   )
@@ -96,7 +96,7 @@ function M.exec_sql_to_csv()
   if result ~= "" then
     -- Копируем в буфер обмена
     vim.fn.setreg("+", result)
-    vim.notify("✅ Query result copied to clipboard and opened in buffer", vim.log.levels.INFO)
+    vim.notify("✅ Query result with headers copied to clipboard and opened in buffer", vim.log.levels.INFO)
 
     -- Открываем CSV в отдельном сплите
     vim.cmd("botright split | edit " .. tmp_csv)
@@ -104,7 +104,6 @@ function M.exec_sql_to_csv()
     vim.notify("⚠️ No result returned", vim.log.levels.WARN)
   end
 end
-
 vim.api.nvim_create_user_command("SqlLogOpen", function()
   vim.cmd("edit " .. vim.fn.stdpath("data") .. "/sql_history.log")
 end, {})
