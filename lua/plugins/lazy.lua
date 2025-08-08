@@ -16,6 +16,16 @@ require("lazy").setup({
     lazy = false,
     priority = 1000,
   },
+-- Telescope (Поиск по папкам и по содержимому файлов)
+  { 
+    "nvim-telescope/telescope.nvim", 
+    version = "0.1.x",  -- указать нужную версию или latest
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-lua/popup.nvim" },
+    config = function()
+      require("config.telescope")  -- файл с кастомными настройками
+    end,
+  },
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make", cond = vim.fn.executable("make") == 1 },
 
   -- 🔍 Autocompletion engine + deps (загружается сразу, чтобы избежать конфликтов)
   {
