@@ -11,10 +11,15 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 
   -- 🎨 Цветовая схема (загружается сразу)
+--  {
+--    "folke/tokyonight.nvim",
+--    lazy = false,
+--    priority = 1000,
+--  },
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
+    "EdenEast/nightfox.nvim",
+    lazy = false, -- грузим сразу
+    priority = 1000, -- загружается раньше других плагинов
   },
 -- Telescope (Поиск по папкам и по содержимому файлов)
   { 
