@@ -45,14 +45,14 @@ vim.keymap.set("n", "<Esc>", "<cmd>noh<CR><Esc>", { silent = true })
 -- В normal mode: >> и << уже работают по умолчанию, оставляем.
 -- В visual mode: > и < тоже работают, так что доп. бинды не нужны.
 
--- ===== Перемещение строки вверх/вниз =====
+-- Движение строк и выделений вверх/вниз (macOS HHKB)
 -- Normal mode
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true, desc = "Move line down" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { noremap = true, silent = true, desc = "Move line up" })
+vim.keymap.set("n", "∆", ":m .+1<CR>==", { silent = true, desc = "Move line down" }) -- Alt+j
+vim.keymap.set("n", "˚", ":m .-2<CR>==", { silent = true, desc = "Move line up" })   -- Alt+k
 
 -- Visual mode
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move selection down" })
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move selection up" })
+vim.keymap.set("v", "∆", ":m '>+1<CR>gv=gv", { silent = true, desc = "Move selection down" })
+vim.keymap.set("v", "˚", ":m '<-2<CR>gv=gv", { silent = true, desc = "Move selection up" })
 
 -- ===== Удаление слова под курсором =====
 -- diw — удалить слово без пробела
