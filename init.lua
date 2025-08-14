@@ -2,6 +2,9 @@ require("config.options")
 require("config.keymaps")
 require("plugins.lazy")
 --require("config.visual_multi")
---vim.cmd("colorscheme tokyonight")
 -- Цветовая схема
-vim.cmd("colorscheme nordfox")
+--vim.cmd("colorscheme nightfox")
+vim.g.everforest_background = "medium" -- "soft", "medium" или "hard"
+vim.g.everforest_enable_italic = 1
+vim.g.everforest_better_performance = 1
+vim.cmd("colorscheme everforest")

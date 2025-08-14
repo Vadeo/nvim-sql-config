@@ -12,15 +12,15 @@ require("lazy").setup({
 
   -- 🎨 Цветовая схема (загружается сразу)
 --  {
---    "folke/tokyonight.nvim",
---    lazy = false,
---    priority = 1000,
+--    "EdenEast/nightfox.nvim",
+--    lazy = false, -- грузим сразу
+--    priority = 1000, -- загружается раньше других плагинов
 --  },
-  {
-    "EdenEast/nightfox.nvim",
-    lazy = false, -- грузим сразу
-    priority = 1000, -- загружается раньше других плагинов
-  },
+    {
+        "sainnhe/everforest",
+        lazy = false,
+        priority = 1000,
+    },
 -- Telescope (Поиск по папкам и по содержимому файлов)
   { 
     "nvim-telescope/telescope.nvim", 
