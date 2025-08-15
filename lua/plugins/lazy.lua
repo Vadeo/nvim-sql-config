@@ -57,11 +57,11 @@ require("lazy").setup({
   },
 
   -- 🖊️ Multicursor (Ctrl-n или Visual Block + I/A)
---  {
---    "mg979/vim-visual-multi",
---    branch = "master",
---    lazy = true,
---    event = "VeryLazy",
---  },
+  {
+    "mg979/vim-visual-multi",
+    branch = "master",
+    lazy = true,
+    event = "VeryLazy",
+  },
 
 })

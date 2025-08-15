@@ -1,7 +1,7 @@
 require("config.options")
 require("config.keymaps")
 require("plugins.lazy")
---require("config.visual_multi")
+require("config.visual_multi")
 -- Цветовая схема
 --vim.cmd("colorscheme nightfox")
 vim.g.everforest_background = "medium" -- "soft", "medium" или "hard"
