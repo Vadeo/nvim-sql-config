@@ -61,3 +61,10 @@ vim.keymap.set("n", "<leader>dw", "diw", { noremap = true, silent = true, desc =
 vim.keymap.set("n", "<leader>dW", "daw", { noremap = true, silent = true, desc = "Delete word with space" })
 -- ciw — заменить слово
 vim.keymap.set("n", "<leader>cw", "ciw", { noremap = true, silent = true, desc = "Change inner word" })
+
+
+-- Открыть/закрыть файловый менеджер
+vim.keymap.set("n", "<leader>e", ":Neotree toggle left<CR>", { desc = "Toggle file explorer" })
+
+-- Открыть менеджер в текущей папке
+vim.keymap.set("n", "<leader>o", ":Neotree reveal<CR>", { desc = "Reveal current file in explorer" })
