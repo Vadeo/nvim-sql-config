@@ -64,7 +64,7 @@ vim.keymap.set("n", "<leader>cw", "ciw", { noremap = true, silent = true, desc =
 
 
 -- Открыть/закрыть файловый менеджер
-vim.keymap.set("n", "<leader>e", ":Neotree toggle left<CR>", { desc = "Toggle file explorer" })
+vim.keymap.set("n", "<leader>o", ":Neotree toggle left<CR>", { desc = "Toggle file explorer" })
 
 -- Открыть менеджер в текущей папке
-vim.keymap.set("n", "<leader>o", ":Neotree reveal<CR>", { desc = "Reveal current file in explorer" })
+vim.keymap.set("n", "<leader>p", ":Neotree reveal<CR>", { desc = "Reveal current file in explorer" })
